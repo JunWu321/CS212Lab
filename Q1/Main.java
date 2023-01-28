@@ -1,5 +1,5 @@
 //Write a program to determine what happens if you divide a double by 0.
-
+//The error you get running this code is intentional to let you see what happens when you divide by 0
 
 package HelloWorld;
 
