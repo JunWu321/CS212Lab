@@ -1,4 +1,5 @@
 //Write a program that asks the user for three integers, then outputs their sum in a sentence.
+//If you get any warnings about wrapping your scanner in a try/catch block, we will cover this later. For purposes of this lab, it is fine.
 
 
 package HelloWorld;
