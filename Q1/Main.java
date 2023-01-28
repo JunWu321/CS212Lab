@@ -1,4 +1,4 @@
-Write a program to determine what happens if you divide a double by 0.
+//Write a program to determine what happens if you divide a double by 0.
 
 
 package HelloWorld;
