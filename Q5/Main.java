@@ -6,7 +6,7 @@ package GuessNumber;
 
 import java.util.Scanner;
 
-public class GuessNumber {
+public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int target = (int) (Math.random() * 100) + 1;
