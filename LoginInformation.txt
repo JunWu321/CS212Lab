@@ -1,0 +1,2 @@
+Username: First 2 letters of your last name, followed by first 2 letters of first name, followed by last 4 digits of CUNYfirst ID.
+Password: 8 digits CUNYfirst ID#.
