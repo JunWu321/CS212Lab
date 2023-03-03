@@ -6,6 +6,7 @@ package YOUR_PACKAGE_NAME;
 public class Main {
 
   public static String scrambleWord(String word) {
+  
     //if string is empty, just return empty string
     if (word.equals("")) {
       return "";
@@ -18,9 +19,10 @@ public class Main {
     }
     
     int length = chars.length;
-    boolean[] used = new boolean[length]; //used array to keep track of letter positions we already swapped
-    for (int i = 0; i < length - 1; i++) {   //length-1 because the last index has no element to its right
-      if (chars[i] == 'A' && chars[i + 1] != 'A' && !used[i] && !used[i + 1]) { //swap
+    boolean[] used = new boolean[length];         //used array to keep track of letter positions we already swapped
+    
+    for (int i = 0; i < length - 1; i++) {         //length-1 because the last index has no element to its right
+      if (chars[i] == 'A' && chars[i + 1] != 'A' && !used[i] && !used[i + 1]) {             //swap
         char temp = chars[i];
         chars[i] = chars[i + 1];
         chars[i + 1] = temp;
