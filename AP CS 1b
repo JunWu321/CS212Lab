@@ -1,0 +1,12 @@
+public static void scrambleOrRemove(ArrayList<String> wordList) {
+    for (int i = 0; i < wordList.size(); i++) {
+        String word = wordList.get(i);
+        String scrambled = scrambleWord(word);
+        if (scrambled.equals(word)) {
+            wordList.remove(i);
+            i--;
+        } else {
+            wordList.set(i, scrambled);
+        }
+    }
+}
