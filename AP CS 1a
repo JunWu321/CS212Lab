@@ -1,25 +1,53 @@
-public static String scrambleWord(String word) {
-  // create a character array with the same length as the input word
-  char[] chars = new char[word.length()];
-  for (int i = 0; i < word.length(); i++) {
-    chars[i] = word.charAt(i);
-  }
-  int length = chars.length;
-  boolean[] used = new boolean[length - 1];
-  for (int i = 0; i < length - 1; i++) {
-    if (chars[i] == 'A' && chars[i + 1] != 'A' && !used[i] && !used[i + 1])) {
-    char temp = chars[i];
-    chars[i] = chars[i + 1];
-    chars[i + 1] = temp;
-    used[i] = true;
-    used[i + 1] = true;
-  }
-}
+//https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap14_frq_computer_science_a.pdf
+//problem 1a
 
-String scrambledWord = "";
-for (char c: chars) {
-  scrambledWord += c;
-}
-return scrambledWord;
+package YOUR_PACKAGE_NAME;
+
+public class Main {
+
+  public static String scrambleWord(String word) {
+    //if string is empty, just return empty string
+    if (word.equals("")) {
+      return "";
+    }
+    
+    // create a character array with the same length as the input word
+    char[] chars = new char[word.length()];
+    for (int i = 0; i < word.length(); i++) {
+      chars[i] = word.charAt(i);
+    }
+    
+    int length = chars.length;
+    boolean[] used = new boolean[length]; //used array to keep track of letter positions we already swapped
+    for (int i = 0; i < length - 1; i++) {   //length-1 because the last index has no element to its right
+      if (chars[i] == 'A' && chars[i + 1] != 'A' && !used[i] && !used[i + 1]) { //swap
+        char temp = chars[i];
+        chars[i] = chars[i + 1];
+        chars[i + 1] = temp;
+        used[i] = true;
+        used[i + 1] = true;
+      }
+    }
+
+    //convert array back to string
+    String scrambledWord = "";
+    for (char c: chars) {
+      scrambledWord += c;
+    }
+    
+    return scrambledWord;
+
+  }
+
+  public static void main(String[] args) {
+    System.out.println(scrambleWord(""));
+    System.out.println(scrambleWord("TAN"));
+    System.out.println(scrambleWord("ABRACADABRA"));
+    System.out.println(scrambleWord("WHOA"));
+    System.out.println(scrambleWord("AARDVARK"));
+    System.out.println(scrambleWord("EGGS"));
+    System.out.println(scrambleWord("A"));
+
+  }
 
 }
