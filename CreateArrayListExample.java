@@ -1,6 +1,5 @@
 package arraylist_ex;
 import java.util.ArrayList;
-import java.util.List;
 
 public class CreateArrayListExample {
 
