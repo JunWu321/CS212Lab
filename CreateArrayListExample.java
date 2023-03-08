@@ -14,13 +14,17 @@ public class CreateArrayListExample {
         animals.add("Cat");
         animals.add("Dog");
 
-        System.out.println(animals);
+        for (int i=0; i<animals.size(); i++) {
+        	System.out.println(animals.get(i));
+        }
 
         // Adding an element at a particular index in an ArrayList
         animals.add(2, "Elephant");
         animals.remove(0);
 
-        System.out.println(animals);
+        for (int i=0; i<animals.size(); i++) {
+        	System.out.println(animals.get(i));
+        }
 
     }
 }
