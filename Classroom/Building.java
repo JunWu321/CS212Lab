@@ -11,7 +11,7 @@ public class Building {
 		Classroom largestClassroom=null;
 		int largestRoom=0;
 		for (Classroom i : Classrooms){
-			if (i.getRoomNumber()>largestRoom) {
+			if (i.getSquareFootage()>largestRoom) {
 				largestClassroom=i;
 				largestRoom=i.getRoomNumber();
 			}
