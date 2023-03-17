@@ -1,4 +1,4 @@
-package classroom;
+package Building;
 
 public class Classroom {
     private int roomNumber;
