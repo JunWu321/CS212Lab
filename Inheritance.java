@@ -2,6 +2,19 @@
 // list of shapes in the main method.
 
   
+package Shapes;
+
+public class Circle extends Shape{
+	
+	public double radius;
+	
+	public Circle(double radius) {
+		super(2*Math.PI*radius, Math.PI*Math.pow(radius, 2));
+		this.radius=radius;
+	}
+
+}
+
 //    Write two methods in the Circle class called fitsInside, one with a Circle and one with a Rectangle as a parameter. Return true if this 
 //   Circle fits inside the other shape without the sides touching. Test this by seeing if your Circle fits in another Circle, a Rectangle, and a Square.
 
