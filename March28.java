@@ -3,7 +3,7 @@
 
   public boolean overlaps(Range a) {
     for (int i = this.low; i <= this.high; i++) {
-      for (int j = a.low; j <= this.high; j++) {
+      for (int j = a.low; j <= a.high; j++) {
         if (i == j) {
           return true;
         }
