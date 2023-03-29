@@ -22,3 +22,23 @@ public boolean overlaps(NumberArray other) {
 
 // Write the class MultiGroup which implements NumberGroup. A MultiGroup takes a list of NumberGroups as the constructor parameter and 
 // copies the elements of the list into its field. It contains a number if any of its NumberGroups contain that number.
+
+
+public class MultiGroup implements NumberGroup {
+
+    private List<NumberGroup> groups;
+
+    public MultiGroup(List<NumberGroup> numberGroups) {
+        groups = new ArrayList<>(numberGroups);
+    }
+
+    @Override
+    public boolean contains(double number) {
+        for (NumberGroup group : groups) {
+            if (group.contains(number)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
