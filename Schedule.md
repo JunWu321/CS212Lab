@@ -2,7 +2,7 @@
 
 - Midterm review; no specific questions to review
 
-# 4/4
+# 4/4-LinkedList on BB
 
 - Add a second add method that adds an element to the end of the list.
 - Add an indexOf method that returns the first index of an element.
@@ -14,13 +14,13 @@
 - Experiment with JOptionPane.
 
 
-# 3/28- Interfaces
+# 3/28- Interfaces on BB
 
 - Add an overlaps method to Range, which determines whether this Range has any numerical overlap with another Range.
 - Add an overlaps method to NumberArray, which determines this NumberArray has any overlap with another NumberArray.
 - Write the class MultiGroup which implements NumberGroup. A MultiGroup takes a list of NumberGroups as the constructor parameter and copies the elements of the list into its field. It contains a number if any of its NumberGroups contain that number.
 
-# 3/22- Abstract classes
+# 3/22- Abstract classes on BB
 
 - Write Pig, a subclass of animal.
 - Write ConsistentChick, a subclass of Chick. A ConsistentChick decides at birth whether to chirp or cheep and stands by that decision forever. Its type is still Chick.
