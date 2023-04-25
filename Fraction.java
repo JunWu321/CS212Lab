@@ -1,4 +1,10 @@
-//Implement Fraction class extending Comparable Interface. Add an equals method
+// Fraction class implementing Comparable Interface. Add an equals method
+
+
+// equals returns a boolean BUT compareTo returns an int
+// -1 means left hand side smaller than right hand side
+// 0 means left hand side EQUAL to right hand side
+// 1 means left hand side larger than right hand side
 
 public class Fraction implements Comparable<Fraction> {
     public int numerator;
@@ -16,6 +22,7 @@ public class Fraction implements Comparable<Fraction> {
     // The compareTo method is used to compare this Fraction object with another Fraction object.
     @Override
     public int compareTo(Fraction other) {
+        //assuming no floating point inaccuracies; if you want to be super accurate, reduce the fraction or convert to long 
         double thisValue = this.numerator / this.denominator;
         double otherValue = other.numerator / other.denominator;
         return Double.compare(thisValue, otherValue);
@@ -23,15 +30,13 @@ public class Fraction implements Comparable<Fraction> {
 
     // The equals method checks if this Fraction object is equal to another Fraction object.
     public boolean equals(Fraction other) {
-        // Check if the reference of this Fraction object and the other Fraction object is the same.
-        if (this == other) {
-            return true;
-        }
         if (other == null) {
             return false;
         }
-
-        return numerator == other.numerator && denominator == other.denominator;
+        //assuming no floating point inaccuracies; if you want to be super accurate, reduce the fraction or convert to long 
+        double thisValue = this.numerator / this.denominator;
+        double otherValue = other.numerator / other.denominator;
+        return thisValue == otherValue;
     }
 
     @Override
