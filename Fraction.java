@@ -1,3 +1,4 @@
+package Fraction;
 //Fraction class implementing Comparable Interface. Add an equals method
 
 //equals returns a boolean BUT compareTo returns an int
@@ -21,7 +22,7 @@ public class Fraction implements Comparable < Fraction > {
   // The compareTo method is used to compare this Fraction object with another Fraction object.
   @Override
   public int compareTo(Fraction other) {
-    //remember, numerator and denominator are ints, so we must cast it.
+    //remember, numerator and denominator are ints, and dividing and int/int gives an int so we must cast it.
 	double thisValue = (double) (this.numerator / this.denominator);
     double otherValue = (double) other.numerator/ other.denominator;
     return Double.compare(thisValue, otherValue);
@@ -32,7 +33,7 @@ public class Fraction implements Comparable < Fraction > {
     if (other == null) {
       return false;
     }
-    //remember, numerator and denominator are ints, so we must cast it.
+    //remember, numerator and denominator are ints, and dividing and int/int gives an int so we must cast it.
     double thisValue = (double) this.numerator / this.denominator;
     double otherValue = (double) other.numerator / other.denominator;
     return thisValue == otherValue;
